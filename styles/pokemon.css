@@ -1,0 +1,118 @@
+.pokemon-wrap, .pokemon-fullwrap {
+  text-align: center;
+}
+
+.pokemon-fullwrap:hover {
+  box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+  transform: translateY(-4px);
+}
+
+span {
+  margin: 2px;
+  padding: 3px;
+  border-radius: 15px;
+  color: black;
+}
+
+/* 草 */
+.grass {
+  background-color: green;
+}
+
+/* 毒 */
+.poison {
+  background-color: purple;
+}
+
+/* 炎 */
+.fire {
+  background-color: red;
+}
+
+/* 飛行 */
+.flying {
+  background-color: lightblue;
+}
+
+/* 水 */
+.water {
+  background-color: blue;
+}
+
+/* 虫 */
+.bug {
+  background-color: yellowgreen;
+}
+
+/* ノーマル */
+.normal {
+  color: black;
+}
+
+/* 電気 */
+.electric {
+  background-color: yellow;
+}
+
+/* 地面 */
+.ground {
+  background-color: beige;
+  color: black;
+}
+
+/* フェアリー */
+.fairy {
+  background-color: pink;
+}
+
+/* 格闘 */
+.fighting{
+  background-color: brown;
+}
+
+/* 氷 */
+.ice {
+  background-color: lightblue;
+}
+
+/* エスパー */
+.psychic {
+  background-color: palevioletred;
+}
+
+/* 岩 */
+.rock {
+  background-color: burlywood;
+}
+
+/* ゴースト */
+.ghost {
+  background-color: darkblue;
+}
+
+/* ドラゴン */
+.dragon {
+  background-color: darkcyan;
+}
+
+/* 悪 */
+.dark {
+  background-color: black;
+}
+
+/* 鋼 */
+.steel {
+  background-color: silver;
+}
+
+table {
+  width: 40%;
+}
+
+.status {
+  width:60%;
+}
+
+th {
+  text-align: center;
+}
