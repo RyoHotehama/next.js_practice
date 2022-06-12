@@ -2,8 +2,8 @@ import Area from './area'
 export default function Sidebar() {
 
   return (
-    <div>
-      <h3>一覧</h3>
+    <div className="col-2">
+      <ul className="">
       <Area area_id = '1' limit = "151" offset = "0" title = 'カントー' />
       <Area area_id = '152' limit = "100" offset = "151" title = 'ジョウト' />
       <Area area_id = '252' limit = "135" offset = "251" title = 'ホウエン' />
@@ -13,6 +13,7 @@ export default function Sidebar() {
       <Area area_id = '722' limit = "86" offset = "721" title = 'アローラ' />
       <Area area_id = '810' limit = "89" offset = "809" title = 'ガラル' />
       <Area area_id = '808' limit = "2" offset = "807" title = 'その他' />
+      </ul>
     </div>
   )
 }

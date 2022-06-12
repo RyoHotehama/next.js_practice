@@ -1,6 +1,6 @@
 import React, {useContext, useState, useEffect} from 'react'
 import {onAuthStateChanged, GoogleAuthProvider, signInWithRedirect} from "firebase/auth";
-import '../../components/fire'
+
 
 const AuthContext = React.createContext()
 
