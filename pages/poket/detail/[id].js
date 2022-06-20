@@ -11,10 +11,14 @@ export default function Home() {
 return (
   <div>
     <Layout title={"pokemonNo." + id}>
-      <Link href = {{ pathname: '/poket/detail/[id]', query: { id: id -1 }}} passHref>
+      {id > 1 &&<Link href = {{ pathname: '/poket/detail/[id]', query: { id: id -1 }}} passHref>
         <a>前へ</a>
-      </Link>
+      </Link>}
+      {id <= 1 && <div>前へ</div>}
       <ApiDetail id= {id}/>
+      <Link href = {{ pathname: '/poket/detail/[id]', query: { id: Number(id) + 1 }}} passHref>
+        <a>次へ</a>
+      </Link>
     </Layout>
   </div>
 )

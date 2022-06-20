@@ -1,4 +1,5 @@
 import Area from './area'
+import Type from './type'
 export default function Sidebar() {
 
   return (
@@ -13,6 +14,9 @@ export default function Sidebar() {
       <Area area_id = '722' limit = "86" offset = "721" title = 'アローラ' />
       <Area area_id = '810' limit = "89" offset = "809" title = 'ガラル' />
       <Area area_id = '808' limit = "2" offset = "807" title = 'その他' />
+      </ul>
+      <ul>
+        <Type type_id = "1" title = "ノーマル" />
       </ul>
     </div>
   )
