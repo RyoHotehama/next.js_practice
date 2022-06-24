@@ -18,9 +18,11 @@ function apiType (props) {
   }, [props])
 
   return (
-    <div className="row">
-        {data.pokemon.map((value) => (
-          <ApiWrap url = {value.pokemon.url} name = {value.pokemon.name} />
+    <div className="row ml-3">
+        {data.pokemon.map((value, key) => (
+          <div key={key} className = "col-sm-3 border rounded pokemon-fullwrap m-3">
+            <ApiWrap url = {value.pokemon.url} name = {value.pokemon.name} />
+          </div>
         ))}
     </div>
   )

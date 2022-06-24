@@ -2,23 +2,21 @@ import axios from "axios";
 import {useState, useEffect} from "react"
 
 function NameConversion (props) {
-  const url = "https://pokeapi.co/api/v2/pokemon-species/" + props.id
   const [data, setData] = useState({names:[{name: ""}]})
 
   useEffect(() => {
-    try {
-      axios.get(
-      url
+    (async () => {
+      await axios.get(
+        props.url
       ).then(res => setData(res.data))
-    } catch {
-      console.log('miss')
-    }
+      console.log('nameConversionAPI接続完了')
+    })();
   },[props])
 
   
   return (
     <>
-      <h3 key={props.key}>{props.title && props.title}{data.names[0].name}</h3>
+      <h3>{props.title && props.title}{data.names[0].name}</h3>
     </>
   )
 }

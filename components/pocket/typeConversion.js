@@ -1,6 +1,5 @@
 import axios from "axios";
 import {useState, useEffect} from "react"
-import Link from 'next/link'
 
 function TypeConversion (props) {
   const [data, setData] = useState({names:[{name: ""}]})
@@ -10,6 +9,7 @@ function TypeConversion (props) {
       axios.get(
       props.url
       ).then(res => setData(res.data))
+      console.log('typeConversionAPI接続完了')
     } catch {
       console.log('miss')
     }

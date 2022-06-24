@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import ApiClient from '../api/pocket/pokemonList'
+import ApiClient from '../../components/pocket/pokemonList'
 import Layout from '../../components/layout'
  
 export default function Home() {

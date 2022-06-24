@@ -10,6 +10,7 @@ export default function Layout (props) {
         <title>{props.title}</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossOrigin="anonymous"></link>
       </Head>
+      <Header />
       <div className="d-flex">
       <Sidebar />
         {props.children}

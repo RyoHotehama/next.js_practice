@@ -11,16 +11,18 @@ function apiClient (props) {
       axios.get(
       url
       ).then(res => setData(res.data))
-      console.log('ok')
+      console.log('pokemonListAPI接続完了')
     } catch {
-      console.log('miss')
+      console.log('pokemonListAPI接続失敗')
     }
   },[props])
   
   return (
-    <div className="row">
+    <div className="row ml-3">
         {data.results.map((value, key) => (
-          <ApiWrap url = {value.url} name = {value.name} key = {key}/>
+          <div key={key} className = "col-sm-3 border rounded pokemon-fullwrap m-3">
+            <ApiWrap url = {value.url} name = {value.name} />
+          </div>
         ))}
     </div>
   )

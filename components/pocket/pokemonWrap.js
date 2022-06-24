@@ -4,9 +4,7 @@ import Link from 'next/link'
 import NameConversion from './nameConversion'
 
 function apiWrap (props) {
-  const ImgSrc = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"
-  const style = ".png"
-  const [data, setData] = useState({id: 0})
+  const [data, setData] = useState({id: 0, sprites:[], species:[]})
 
   useEffect(() => {
     try {
@@ -22,14 +20,19 @@ function apiWrap (props) {
   return (
     <>
     {data.id > 0 && 
-      <div className="col-sm-3 border rounded pokemon-fullwrap m-3">
+      <div>
         <Link href = {{ pathname: '/poket/detail/[id]', query: { id: data.id}}} passHref>
           <a>
             <div>
-              <img key={props.key} src={ImgSrc + data.id + style} height="200" width="200" />
+              {data.sprites.front_default && 
+                <img src={data.sprites.front_default} height="200" width="200" />
+              }
+              {!data.sprites.front_default && 
+                <img height="200" width="200" />
+              }
             </div>
             <div>
-              <NameConversion id = {data.id} key = {props.key}/>
+              <NameConversion url = {data.species.url}/>
             </div>
           </a>
         </Link>
